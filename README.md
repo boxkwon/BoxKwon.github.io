@@ -1,7 +1,3 @@
-# 마크다운 문법 학습하기
+# 30 Day Vanilla JS Coding Challenge
 
-## 마크다운 소개
-
-## 마크다운 문법
-
-### 제목
+[javascript30.com](https://javascript30.com/)의 30일 바닐라JS 코딩 챌린지를 해보려고 합니다.
