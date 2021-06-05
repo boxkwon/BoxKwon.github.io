@@ -33,7 +33,7 @@
 
             function orientationFunc(e) {
                 h1.innerHTML = "alpha : "+e.alpha + "<br>beta : " + e.beta + "<br>gamma : " + e.gamma;
-                cursor_item.style.transform = "translate("+e.beta+"px,"+e.gamma+"px)";
+                cursor_item.style.transform = "translate("+e.gamma+"px,"+e.beta+"px)";
                 //cursor_item.style.transform = `rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
                 console.log(e.alpha, e.beta, e.gamma);
             }
