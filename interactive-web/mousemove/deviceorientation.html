@@ -39,13 +39,12 @@
             window.addEventListener("deviceorientation", orientationFunc, false);
 
             function orientationFunc(e) {
-                //let centerGamma = (e.gamma - window.innerWidth / 2);
-                //let centerBeta = (e.beta - window.innerWidth / 2);
+                let orientAlpah = Math.floor(e.alpha);
+                let orientBeta = Math.floor(e.beta);
+                let orientGamma = Math.floor(e.gamma);
 
-                h1.innerHTML = "alpha : "+e.alpha + "<br>beta : " + e.beta + "<br>gamma : " + e.gamma;
-                cursor_item.style.transform = "translate("+e.gamma+"px,"+e.beta+"px)";
-                //cursor_item.style.transform = `rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
-                //console.log(e.alpha, e.beta, e.gamma);
+                h1.innerHTML = "alpha : " + orientAlpah + "<br>beta : " + orientBeta + "<br>gamma : " + orientGamma;
+                cursor_item.style.transform = "translate("+ orientGamma +"px,"+ orientBeta +"px)";
             }
         }
     </script>
