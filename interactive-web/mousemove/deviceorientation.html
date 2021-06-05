@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         html {
+            position: relative;
+            height: 100%;
             cursor : none;
         }
         body {
             background-color: #000;
-            position:relative;
         }
         h1 {
             color: #fff;
         }
         .cursor_item {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
             width: 100px;
             height: 100px;
             background-color: red;
@@ -38,11 +39,11 @@
             window.addEventListener("deviceorientation", orientationFunc, false);
 
             function orientationFunc(e) {
-                let centerGamma = (e.gamma - window.innerWidth / 2);
-                let centerBeta = (e.beta - window.innerWidth / 2);
+                //let centerGamma = (e.gamma - window.innerWidth / 2);
+                //let centerBeta = (e.beta - window.innerWidth / 2);
 
                 h1.innerHTML = "alpha : "+e.alpha + "<br>beta : " + e.beta + "<br>gamma : " + e.gamma;
-                cursor_item.style.transform = "translate("+e.centerGamma+"px,"+e.centerBeta+"px)";
+                cursor_item.style.transform = "translate("+e.gamma+"px,"+e.beta+"px)";
                 //cursor_item.style.transform = `rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
                 //console.log(e.alpha, e.beta, e.gamma);
             }
