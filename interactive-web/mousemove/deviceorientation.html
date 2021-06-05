@@ -25,6 +25,12 @@
         }
     </style>
     <script>
+        function mouseFunc(e){
+            x = (e.clientX - window.innerWidth / 2);
+            y = (e.clientY - window.innerHeight / 2);
+          }
+
+
         window.onload = function() {
             let h1 = document.getElementsByTagName("h1")[0];
             let cursor_item = document.getElementsByClassName("cursor_item")[0];
@@ -32,10 +38,13 @@
             window.addEventListener("deviceorientation", orientationFunc, false);
 
             function orientationFunc(e) {
+                let centerGamma = (e.gamma - window.innerWidth / 2);
+                let centerBeta = (e.beta - window.innerWidth / 2);
+
                 h1.innerHTML = "alpha : "+e.alpha + "<br>beta : " + e.beta + "<br>gamma : " + e.gamma;
-                cursor_item.style.transform = "translate("+e.gamma+"px,"+e.beta+"px)";
+                cursor_item.style.transform = "translate("+e.centerGamma+"px,"+e.centerBeta+"px)";
                 //cursor_item.style.transform = `rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
-                console.log(e.alpha, e.beta, e.gamma);
+                //console.log(e.alpha, e.beta, e.gamma);
             }
         }
     </script>
