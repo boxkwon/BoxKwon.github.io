@@ -47,8 +47,10 @@
             loop();
         }
         function loop() {
-            mouseX += (orientGamma - mouseX) * speed;
-            mouseY += (orientBeta - mouseY) * speed;
+            // mouseX += (orientGamma - mouseX) * speed;
+            // mouseY += (orientBeta - mouseY) * speed;
+
+            mouseX += orientGamma - mouseX;
 
             // h1.innerHTML = "orientGamma : "+ orientGamma + " Y: " + mouseY;
             h1.innerHTML = "- orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- speed : " + speed;
