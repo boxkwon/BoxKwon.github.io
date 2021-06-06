@@ -24,11 +24,11 @@
     <script>
         let h1;
         let cursor_item;
+        let x = 0;
+        let y = 0;
         let orientAlpah;
         let orientBeta;
         let orientGamma;
-        let mouseX = 0;
-        let mouseY = 0;
         let speed = 0.03;
 
         window.onload = function() {
@@ -41,8 +41,10 @@
                 orientAlpah = Math.floor(e.alpha);
                 orientBeta = Math.floor(e.beta);
                 orientGamma = Math.floor(e.gamma);
+
+                h1.innerHTML = "alpha : " + orientAlpah + "<br>beta : " + orientBeta + "<br>gamma : " + orientGamma;
             }
-            loop();
+            //loop();
         }
         function loop() {
             //console.log(x , y);
