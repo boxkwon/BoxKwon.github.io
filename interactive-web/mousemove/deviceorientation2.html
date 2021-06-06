@@ -38,14 +38,11 @@
             window.addEventListener("deviceorientation", orientationFunc, false);
 
             function orientationFunc(e) {
-                // orientAlpah = Math.floor(e.alpha);
-                // orientBeta = Math.floor(e.beta);
-                // orientGamma = Math.floor(e.gamma);
-                orientAlpah = e.alpha;
-                orientBeta = e.beta;
-                orientGamma = e.gamma;
+                orientAlpah = Math.floor(e.alpha);
+                orientBeta = Math.floor(e.beta);
+                orientGamma = Math.floor(e.gamma);
 
-                h1.innerHTML = "- alpha : " + orientAlpah + "<br>- beta : " + orientBeta + "<br>- gamma : " + orientGamma;
+                // h1.innerHTML = "- alpha : " + orientAlpah + "<br>- beta : " + orientBeta + "<br>- gamma : " + orientGamma;
             }
             loop();
         }
@@ -53,7 +50,8 @@
             mouseX += (orientGamma - mouseX) * speed;
             mouseY += (orientBeta - mouseY) * speed;
 
-            h1.innerHTML = "orientGamma : "+ orientGamma + " Y: " + mouseY;
+            // h1.innerHTML = "orientGamma : "+ orientGamma + " Y: " + mouseY;
+            h1.innerHTML = "- orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- gamma : " + gamma;
 
             // cursor_item.style.transform = "translate("+ mouseX +"px,"+ mouseY +"px)";
             window.requestAnimationFrame(loop);
