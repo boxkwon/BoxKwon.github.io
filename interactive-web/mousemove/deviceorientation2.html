@@ -47,13 +47,13 @@
             loop();
         }
         function loop() {
-            // mouseX += (orientGamma - mouseX) * speed;
-            // mouseY += (orientBeta - mouseY) * speed;
+            orientGamma += (orientGamma - mouseX) * speed;
+            orientBeta += (orientBeta - mouseY) * speed;
 
             //mouseX = orientGamma - mouseX;
 
             // h1.innerHTML = "orientGamma : "+ orientGamma + " Y: " + mouseY;
-            h1.innerHTML = "t - orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- speed : " + speed;
+            h1.innerHTML = "-- orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- speed : " + speed;
 
             // cursor_item.style.transform = "translate("+ mouseX +"px,"+ mouseY +"px)";
             window.requestAnimationFrame(loop);
