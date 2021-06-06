@@ -55,7 +55,7 @@
             h1.innerHTML = "orientGamma : "+ orientGamma + "<br>orientBeta : " + orientBeta;
             // h1.innerHTML = "-- orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- speed : " + speed;
 
-            cursor_item.style.transform = "translate("+ mouseX +"px,"+ mouseY +"px)";
+            cursor_item.style.transform = "translate("+ orientGamma +"px,"+ orientBeta +"px)";
             window.requestAnimationFrame(loop);
         }
 
