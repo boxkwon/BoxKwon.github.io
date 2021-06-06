@@ -24,11 +24,11 @@
     <script>
         let h1;
         let cursor_item;
-        let x = 0;
-        let y = 0;
         let orientAlpah;
         let orientBeta;
         let orientGamma;
+        let mouseX = 0;
+        let mouseY = 0;
         let speed = 0.03;
 
         window.onload = function() {
@@ -42,18 +42,17 @@
                 orientBeta = Math.floor(e.beta);
                 orientGamma = Math.floor(e.gamma);
 
-                //h1.innerHTML = "- alpha : " + orientAlpah + "<br>- beta : " + orientBeta + "<br>- gamma : " + orientGamma;
+                h1.innerHTML = "- alpha : " + orientAlpah + "<br>- beta : " + orientBeta + "<br>- gamma : " + orientGamma;
             }
             loop();
         }
         function loop() {
-            // mouseX += (x - mouseX) * speed;
-            // mouseY += (y - mouseY) * speed;
+            mouseX += (orientGamma - mouseX) * speed;
+            mouseY += (orientBeta - mouseY) * speed;
 
-            // h1.innerHTML = "X : "+ x + " Y: " + mouseY;
+            h1.innerHTML = "orientGamma : "+ orientGamma + " Y: " + mouseY;
 
             // cursor_item.style.transform = "translate("+ mouseX +"px,"+ mouseY +"px)";
-            h1.innerHTML = "- loop alpha : " + orientAlpah + "<br>- loop beta : " + orientBeta + "<br>- loop gamma : " + orientGamma;
             window.requestAnimationFrame(loop);
         }
 
