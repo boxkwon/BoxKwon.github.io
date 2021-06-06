@@ -33,7 +33,7 @@
 
         window.onload = function() {
             h1 = document.getElementsByTagName("h1")[0];
-            //cursor_item = document.getElementsByClassName("cursor_item")[0];
+            cursor_item = document.getElementsByClassName("cursor_item")[0];
 
             window.addEventListener("deviceorientation", orientationFunc, false);
 
@@ -52,10 +52,10 @@
 
             //mouseX = orientGamma - mouseX;
 
-            // h1.innerHTML = "orientGamma : "+ orientGamma + " Y: " + mouseY;
-            h1.innerHTML = "-- orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- speed : " + speed;
+            h1.innerHTML = "orientGamma : "+ orientGamma + "<br>orientBeta : " + orientBeta;
+            // h1.innerHTML = "-- orientGamma : " + orientGamma + "<br>- mouseX : " + mouseX + "<br>- speed : " + speed;
 
-            // cursor_item.style.transform = "translate("+ mouseX +"px,"+ mouseY +"px)";
+            cursor_item.style.transform = "translate("+ mouseX +"px,"+ mouseY +"px)";
             window.requestAnimationFrame(loop);
         }
 
@@ -83,6 +83,6 @@
 </head>
 <body>
     <h1>test</h1>
-    <!-- <div class=cursor_item></div> -->
+    <div class=cursor_item></div>
 </body>
 </html>
