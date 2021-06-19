@@ -4,4 +4,9 @@
 
 # 인터랙티브 웹 개발 초급
 
-[inflearn](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C-%EC%9B%B9) 인터랙티브 웹 개발 초급 단계를 공부합니다.
+[inflearn](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C-%EC%9B%B9) 인터랙티브 웹 개발 초급 단계를 공부합니다. - 2021.06.18 학습 완료
+
+# 프론트앤드 개발 올인원 패키지 with React Online
+
+[패스트캠퍼스](https://fastcampus.co.kr/dev_online_react)의 올인원 패키지 강의 들을 학습 합니다.
+1. 이웅재 강사님의 JavaScript 기초를 공부 합니다. - 2021.06.19 시작 ~
