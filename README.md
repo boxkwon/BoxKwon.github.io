@@ -9,4 +9,9 @@
 # 프론트앤드 개발 올인원 패키지 with React Online
 
 [패스트캠퍼스](https://fastcampus.co.kr/dev_online_react)의 올인원 패키지 강의 들을 학습 합니다.
-1. 이웅재 강사님의 JavaScript 기초를 공부 합니다. - 2021.06.19 시작 ~
+1. 이웅재 강사님의 JavaScript 기초를 공부 합니다. - 2021.06.19 시작 ~ 2021.06.22 중단
+
+# Vue.js 압축 완성 올인원 패키지 Online
+
+[패스트캠퍼스](https://fastcampus.co.kr/dev_online_vue)의 Vue 강의를 학습 합니다.
+회사에서 갑작스럽게 SPA 프로젝트에 대한 요구가 있어 리액트 보다 상대적으로 러닝커브가 낮은 vue를 학습 합니다. - 2021.06.22 시작
