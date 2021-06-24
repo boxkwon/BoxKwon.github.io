@@ -63,7 +63,36 @@
         <li>
             <h3>Vue 시작하기 - 2 - 조건문과 반복문</h3>
             <ul>
-                <li>-</li>
+                <li>엘리먼트 존재 여부를 토글하는것은 간단하다.</li>
+                <li>"v-xxx" 디렉티브 라고 한다.</li>
+                <li>직접 엘리먼트를 선택해서 제어할 필요 없이 데이터만 변경하면 렌더링도 제어가 된다.</li>
+                <li>Vue 엘리먼트가 Vue에 삽입/갱신/제거될 때 자동으로 <strong>트랜지션</strong>효과를 적용할 수 있다.</li>
+                <li>
+                    <p><a href="chapter1/v-if.html" target="_blank">조건문 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>v-if="message"</strong></p>
+                            <p>-> 만약에 message가 비어있으면 출력하지 않겠다 라는 의미로써도 사용한다.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p><a href="chapter1/v-for.html" target="_blank">반복문 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>v-for="item in items"</strong></p>
+                            <p>-> items라는 데이터를 반복시킬건데 이 안에 들어있는 각각의 객체데이터를 item이라는 이름으로 정의해서 반복한다</p>
+                        </li>
+                        <li>
+                            <p><strong>{{ item.message }}</strong></p>
+                            <p>-> item에 들어있는 특정 message를 출력하려면 item이라는 객체에 들어있는 message라는 프로퍼티를 찍어서 템플릿 문법으로 출력해주세요</p>
+                        </li>
+                        <li>v-for 디렉티브는 v-bind:key 속성을 반드시 추가해 주어야한다.</li>
+                        <li>각각의 아이템은 고유하게 동작해야 한다.</li>
+                        <li>v-for의 기본 문법이다.</li>
+                        <li>각각의 객체데이터에 id라는 속성을 가지고 있고 id는 기본적으로 고유하다.</li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ol>
