@@ -87,10 +87,11 @@
                             <p><strong>{{ item.message }}</strong></p>
                             <p>-> item에 들어있는 특정 message를 출력하려면 item이라는 객체에 들어있는 message라는 프로퍼티를 찍어서 템플릿 문법으로 출력해주세요</p>
                         </li>
-                        <li>v-for 디렉티브는 v-bind:key 속성을 반드시 추가해 주어야한다.</li>
-                        <li>각각의 아이템은 고유하게 동작해야 한다.</li>
-                        <li>v-for의 기본 문법이다.</li>
-                        <li>각각의 객체데이터에 id라는 속성을 가지고 있고 id는 기본적으로 고유하다.</li>
+                        <li>
+                            <p><strong>v-bind:key="item.id"</strong></p>
+                            <p>-> item에 들어있는 id라는 고윳값을 키로 정의하겠다.</p>
+                        </li>
+                        <li>v-for 디렉티브는 v-bind:key 속성을 함께 사용하는것이 v-for의 기본 문법이다.</li>
                     </ul>
                 </li>
             </ul>
