@@ -16,6 +16,10 @@
             border-radius: 10px;
             cursor: pointer;
             transition: 1s;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .box.active {
             width: 400px;
@@ -23,14 +27,20 @@
         }
     </style>
     <div id="app">
-        <div class="box" v-bind:class="{ active: toggle }"></div>
+        <div class="box"
+             v-bind:class="{ active: toggle }"
+             v-on:click="toggleElement">
+            {{ message }}
+        </div>
         <button v-on:click="toggleElement">Toggle</button>
+        <input type="text" v-model="message">
     </div>
     <script>
         const vueModel = new Vue({
             el: '#app',
             data: {
                 toggle: false,
+                message: ''
             },
             methods: {
                 toggleElement (){
