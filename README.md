@@ -1,4 +1,4 @@
-# <center>[BoxKwon.github.io](https://boxkwon.github.io/){:target="_blank"}</center>
+# <center>[BoxKwon.github.io](https://boxkwon.github.io/)</center>
 
 # 30 Day Vanilla JS Coding Challenge
 
