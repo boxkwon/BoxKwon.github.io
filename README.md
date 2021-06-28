@@ -1,4 +1,4 @@
-# [BoxKwon.github.io](https://boxkwon.github.io/) 블로그
+# <center>[BoxKwon.github.io](https://boxkwon.github.io/){:target="_blank"}</center>
 
 # 30 Day Vanilla JS Coding Challenge
 
