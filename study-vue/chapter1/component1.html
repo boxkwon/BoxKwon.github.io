@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:key="item.id" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+    <script>
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+        })
+
+        const vueModel = new Vue({
+            el: '#app',
+            data : {
+             groceryList : [
+                 { id: 0, text: 'Vegetables'},
+                 { id: 1, text: 'Cheese'},
+                 { id: 2, text: 'Pizza'},
+             ]
+            }
+        })
+    </script>
+</body>
+</html>

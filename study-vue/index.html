@@ -144,5 +144,42 @@
         </li>
     </ol>
     <hr>
+    <h2>2021.06.26</h2>
+    <ol>
+        <li>
+            <h3>Vue 시작하기 - 4 - 컴포넌트를 사용한 작성 방법 .1</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter1/component1.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>Vue.component('todo-item', {...})</strong></p>
+                            <p>-> Vue.Componet 통해서 todo-item이라는 컴포넌트를 정의한다. 첫번째 인자로 컴퍼넌트의 이름을 넣는다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-for="item in groceryList"</strong></p>
+                            <p>-> groceryList 배열 데이터를 반복한다. 배열안의 객체를 item이라는 이름으로 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:todo="item"</strong></p>
+                            <p>-> todo라는 속성으로 item이라는 이름의 객체를 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>props: ['todo']</strong></p>
+                            <p>-> props를 통해서 todo라는 커스텀 프로퍼티를 html 커스텀 속성을 추가하고 데이터를 받아와서 내부에서 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>&lt;todo-item&gt;&lt;/todo-item&gt;</strong></p>
+                            <p>-> todo-item 이라는 커스텀화된 태그에 template의 내용이 삽입된다.</p>
+                        </li>
+                        <li>
+                            <p><strong>template: '&lt;li&gt;{{ todo.text }}&lt;/li&gt;'</strong></p>
+                            <p>-> todo에 들어있는 프로퍼티 text를 li태그 내부에 템플릿 문법을 통해서 출력한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
 </body>
 </html>
