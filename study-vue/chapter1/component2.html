@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <style>
+        li span.done {
+            text-decoration: line-through;
+        }
+    </style>
+    <div id="app">
+        <ul>
+            <my-todo-item v-for="todo in todos" v-bind:key="todo.id" v-bind:todo="todo"></my-todo-item>
+        </ul>
+        <ul>
+            <my-todo-item v-for="todo in todos2" v-bind:key="todo.id" v-bind:todo="todo"></my-todo-item>
+        </ul>
+    </div>
+    <script>
+        Vue.component('my-todo-item', {
+            props: ['todo'],
+            template: `
+                <li>
+                    <input type="checkbox" v-model="todo.done">
+                    <span v-bind:class="{ done: todo.done }">{{ todo.title }}</span>
+                </li>
+            `
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+                todos: [
+                    {
+                        id: '1',
+                        title: '아침 먹기',
+                        done: true
+                    },
+                    {
+                        id: '2',
+                        title: '점심 먹기',
+                        done: false
+                    },{
+                        id: '3',
+                        title: '저녁 먹기',
+                        done: false
+                    },{
+                        id: '4',
+                        title: '간식 먹기',
+                        done: false
+                    },{
+                        id: '5',
+                        title: '야식 먹기',
+                        done: false
+                    },
+                ],
+                todos2: [
+                    {
+                        id: '6',
+                        title: '잠자기',
+                        done :true
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
