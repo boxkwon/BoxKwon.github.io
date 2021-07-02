@@ -9,15 +9,37 @@
 </head>
 <body>
     <div id="app">
-        {{ msg }}
+        <div>{{ messageA }}</div>
+        <div>{{ messageB }}</div>
+        <button v-on:click="changeMessage">Change</button>
     </div>
     <script>
-        new Vue({
+        const vueModel = new Vue ({
             el: '#app',
             data: {
-                msg: 'Hello Vue!?'
+                messageA: 'Message A.',
+                messageB: ''
+            },
+            methods: {
+                changeMessage () {
+                    this.messageA = 'Changed Message A!'
+                    this.messageB = 'Changed Message B!'
+                }
+            },
+            computed: {},
+            watch: {
+                messageA (newMessageA) {
+                    console.log(newMessageA);
+                }
+            },
+            created () {
+
+            },
+            mounted () {
+
             }
         })
+        console.log(vueModel);
     </script>
 </body>
 </html>
