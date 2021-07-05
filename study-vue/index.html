@@ -308,5 +308,76 @@
         </li>
     </ol>
     <hr>
+    <h2>2021.07.05</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 03. Vue 라이프사이클 -2</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/life-cycle.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>beforeCreate({console.log(this.message)})</strong></p>
+                            <p>-> vue 인스턴스가 생성되기 전이기 때문에 이터에 있는 message가 무엇인지 모른다. undefined가 뜬다.</p>
+                        </li>
+                        <li>
+                            <p><strong>created({console.log(this.message)})</strong></p>
+                            <p>-> 인스턴스가 생성된 나서 실행되기 때문에 Hello Vue가 출력된다.</p>
+                        </li>
+                        <li>
+                            <p>vue 에서 제공하는 <strong>ref</strong>속성을 사용하여 "div"라는 이름의 요소를 참조하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>beforeMount({console.log(this.$refs.div)})</strong></p>
+                            <p>-> ref속성으로 정의한 각각의 요소들을 가지고있는데 그 안에서 "div"라는 이름의 요소를 참조하여 보여주겠다.</p>
+                            <p>-> html요소와 vue 인스턴스가 연결되기 전이라 undefined가 뜬다.</p>
+                        </li>
+                        <li>
+                            <p><strong>mounted({console.log(this.$refs.div)})</strong></p>
+                            <p>-> 연결된 후에 체크하기때문에 "div"라는 이름의 요소를 출력한다.</p>
+                        </li>
+                        <li>
+                            <p>vue 에서 제공하는 <strong>ref</strong>속성을 사용하여 "message"라는 이름의 요소를 참조하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>beforeUpdate({console.log(this.$refs.message.innerText)})</strong></p>
+                            <p>-> 데이터가 변경되고 나서 화면이 재 렌더링 되기 직전에 실행되기 때문에 화면에 원래 그려져있던 text가 출력된다.</p>
+                        </li>
+                        <li>
+                            <p><strong>updated({console.log(this.$refs.message.innerText)})</strong></p>
+                            <p>-> 데이터가 변경되고 화면이 재 렌더링 된 후에 실행되었기 때문에 변경한 text가 화면에 출력된다.</p>
+                        </li>
+                        <li>
+                            <p><strong>beforeDestroy()</strong></p>
+                        </li>
+                        <li>
+                            <p><strong>destroyed()</strong></p>
+                            <p>-> vueModel.message = "Hello World~" 를 실행해도 데이터는 들어갔지만 반응성이 사라졌다.</p>
+                            <p>-> vue 인스턴스를 사용하지않는데 메모리를 잡아먹거나 하는 상황에서 사용하기도 한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.07.06</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 04. Vue 템플릿 문법</h3>
+            <ul>
+                <li>
+                    <p><a href="#" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>-</strong></p>
+                            <p>-</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
 </body>
 </html>
