@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div ref="message">{{ message }}</div>
+        <div ref="div"></div>
+    </div>
+    <script>
+        const vueModel = new Vue ({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            beforeCreate () {
+                console.log('befroeCreate!', this.message);
+            },
+            created () {
+                console.log('created!', this.message)
+            },
+            beforeMount () {
+                console.log('beforeMount!', this.$refs.div);
+            },
+            mounted () {
+                console.log('mounted!', this.$refs.div);
+            },
+            beforeUpdate () {
+                console.log('beforeUpdate!', this.$refs.message.innerText);
+            },
+            updated () {
+                console.log('updated!', this.$refs.message.innerText);
+            },
+            beforeDestroy () {
+                console.log('beforeDestroy!');
+            },
+            destroyed () {
+                console.log('destroyed!');
+            }
+        })
+    </script>
+</body>
+</html>
