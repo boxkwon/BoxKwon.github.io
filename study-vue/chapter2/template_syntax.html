@@ -9,15 +9,14 @@
 </head>
 <body>
     <div id="app">
-        <div v-once>{{ message }}</div>
         <div>{{ message }}</div>
-        <div>{{ message }}</div>
+        <div v-html="message"></div>
     </div>
     <script>
         const vueModel = new Vue ({
             el: '#app',
             data: {
-                message: 'hi vue',
+                message: 'Hello Vue!<br/>Good Job~',
             }
         });
     </script>
