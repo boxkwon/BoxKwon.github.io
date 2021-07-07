@@ -11,12 +11,16 @@
     <div id="app">
         <div>{{ message }}</div>
         <div v-html="message"></div>
+        <div>{{ number + 2}}</div>
+        <div>{{ new Date() }}</div>
+        <div>{{ Math.round(1.7) }}</div>
     </div>
     <script>
         const vueModel = new Vue ({
             el: '#app',
             data: {
                 message: 'Hello Vue!<br/>Good Job~',
+                number: 2
             }
         });
     </script>
