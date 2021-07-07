@@ -8,19 +8,28 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+    <style>
+        .normal {
+            color: green;
+        }
+        .active {
+            color: red;
+        }
+    </style>
     <div id="app">
-        <div>{{ message }}</div>
-        <div v-html="message"></div>
-        <div>{{ number + 2}}</div>
-        <div>{{ new Date() }}</div>
-        <div>{{ Math.round(1.7) }}</div>
+        <div :class="className" @click="changeClassName">{{ message }}</div>
     </div>
     <script>
         const vueModel = new Vue ({
             el: '#app',
             data: {
-                message: 'Hello Vue!<br/>Good Job~',
-                number: 2
+                message: 'Hello Vue!',
+                className: 'normal'
+            },
+            methods: {
+                changeClassName () {
+                    this.className = 'active'
+                }
             }
         });
     </script>
