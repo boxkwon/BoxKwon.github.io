@@ -399,8 +399,18 @@
                     <p><a href="chapter2/computed.html" target="_blank"> 예제 (새창)</a></p>
                     <ol>
                         <li>
-                            <p><strong></strong></p>
-                            <p></p>
+                            <p><strong>computed: {...}</strong></p>
+                            <p>-> 서버에서 데이터를 가지고와서 화면을 만들어 내려고하는데 내가 필요한 속성이 없을때 사용한다. </p>
+                        </li>
+                        <li>
+                            <p><strong>return this.todos</strong></p>
+                            <p>-> 특정 값을 return 받아야 한다.</p>
+                            <p>-> data 옵션 내부의 특정 데이터를 연결해 준다.</p>
+                        </li>
+                        <li>
+                            <p><strong>return this.todos.map((todo, index => {...}))</strong></p>
+                            <p>-> 원본 데이터 todo가 갱신되면 computedTodos도 갱신되는 환경 설계</p>
+                            <p>-> 원본 데이터를 반복한 후 가공된 데이터를 반환해 주는 메소드인 <strong>map()</strong>사용</p>
                         </li>
                     </ol>
                 </li>
