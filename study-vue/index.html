@@ -417,5 +417,30 @@
             </ul>
         </li>
     </ol>
+    <hr>
+    <h2>2021.07.14</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 06. computed 캐싱</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/computed2.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>methods: {reverseMessage() {return this.message.split('').reverse().join('')}}</strong></p>
+                            <p>-> methods를 통해서 값을 return 하는데 data에 있는 message를 split해서(기준없는 데이터로 쪼개서 배열데이터로 만든 다음) reverse시키고 join으로 기준없이 다시 합친다.</p>
+                            <p>-> message를 여러번 띄우려면 결과적으로 위의 명령을 여러번 동작해야 한다.</p>
+                            <p>-> 함수가 여러번 실행되어야하고 함수가 실행될때마다 표현식이 반복적으로 계속 실행되어야 한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>computed: {reversedMessage() {return this.message.split('').reverse().join('')}}</strong></p>
+                            <p>-> 표현식은 함수로 구현했지만 결과적으로 사용할때는 데이터처럼 사용한다.</p>
+                            <p>-> 최초에 한번만 연산하여 computed 데이터가 또 사용되면 기존에 연산한게 있기 때문에 결과값을 캐싱하고 또 연산하지 않고 결과만 출력한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
 </body>
 </html>
