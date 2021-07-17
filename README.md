@@ -19,4 +19,4 @@
 회사에서 갑작스럽게 SPA 프로젝트에 대한 요구가 있어 리액트 보다 상대적으로 러닝커브가 낮은 vue를 학습 합니다. - 2021.06.22 시작
 
 # Vue.js 프로젝트 투입 일주일 전
-[inflearn](https://www.inflearn.com/course/vue-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EA%B8%B0) 강사의 저서 [[ Vue.js 프로젝트 투입 일주일 전 ]](http://www.yes24.com/Product/Goods/101978128?OzSrank=3)와 영상을 함께 학습니다. *차주 부터 Vue 실무자와 협업이 필요하여 바로 학습을 시작합니다. - 2021.07.17
+[inflearn](https://www.inflearn.com/course/vue-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EA%B8%B0) 의 동영상 강의와 강사의 저서 [[ Vue.js 프로젝트 투입 일주일 전 ]](http://www.yes24.com/Product/Goods/101978128?OzSrank=3)를 함께 학습니다. *차주 부터 Vue 실무자와 협업이 필요하여 바로 학습을 시작합니다. - 2021.07.17
