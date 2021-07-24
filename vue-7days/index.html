@@ -58,5 +58,24 @@
         </li>
     </ol>
     <hr>
+    <h2>2021.07.24</h2>
+    <ol>
+        <li>
+            <h3>Lazy Load (비동기 컴포넌트) 구성하기</h3>
+            <ul>
+                <li>리소스를 컴포넌트 단위로 분리하여 컴포넌트 혹은 라우터 단위로 필요한 것들만 그때 그때 다운받을 수 있게 하는 방법이다.</li>
+                <li>Vue에서 Lazy Load는 Vue CLI의 prefetch 기능을 사용한 것이다.</li>
+                <li>prefetch 기능은 about.vue의 코드가 about.js로 별도로 분리되어 load가 된다.</li>
+                <li>사이트 최초 로드시 about.js는 메모리(캐시)에 등록하기 때문에 (서버에 리퀘스트를 보내고 리스폰스를 받기 때문에) prefetch가 많을수록 로딩이 느려진다.</li>
+                <li>vue.config.js 파일을 생성하여 dnpqvor chainWebpack 이라고 키를 잡고 prefetch를 사용하지 않도록 설정한다.</li>
+                <li>* config.js를 재설성 했을경우 서버를 재부팅 하여야 한다.</li>
+                <li>아래 세가지 방법을 적절히 설계하는것이 vue 프로젝트에서 성능 향상을 위한 굉장히 중요한 부분 중 하나이다.</li>
+                <li>-> 1. prefetch 기능을 사용안하던가.</li>
+                <li>-> * 2. 초기에 사용가 바로 다음 접속 할 가능성이 높은 페이지(컴퍼넌트)를 예상하여 필요한 것만 prefetch 기능을 사용하던가.</li>
+                <li>-> 3. 처음에 모두 prefetch 하던가.</li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
 </body>
 </html>
