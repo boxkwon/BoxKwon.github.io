@@ -213,5 +213,24 @@
         </li>
     </ol>
     <hr>
+    <h2>2021.08.08</h2>
+    <ol>
+        <li>
+            <h3>이벤트 처리(v-on)</h3>
+            <ul>
+                <li>v-on:click="메소드명(파라미터)" 또는 @click="메소드명(파라미터)"</li>
+                <li>-> 클릭 이벤트를 통해 지정된 함수로 파라미터를 전달 하려면 함수 호출시 파라미터 설정한다.</li>
+                <li>@click="one(), two()"</li>
+                <li>-> 여러 개의 함수 호출시 "," 콤마로 구분하여 추가한다.</li>
+                <li>@change="메소드명(파라미터)"</li>
+                <li>-> 주로 select에 많이 쓰인다.</li>
+                <li>@keyup.이벤트명</li>
+                <li>-> .enter, .tab, .delete(Del, Backspace), .esc, .right, .space</li>
+                <li>@keyup.alt.enter, @click.ctrl</li>
+                <li>-> Control, Shift, Alt키와 같이 다른 키와 같이 사용되는 특수 키도 처리할수 있다.</li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
 </body>
 </html>
