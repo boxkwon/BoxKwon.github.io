@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Check</title>
+</head>
+<body>
+    <style>
+        p {margin:0 auto; width:320px;}
+        @media  screen and (min-width:675px) {
+            p {font-weight:bold; color:red;}
+        }
+    </style>
+    <p id="innerWidth"></p>
+    <p id="innerHeight"></p>
+    <p id="outerWidth"></p>
+    <p id="outerHeight"></p>
+    <script>
+        document.getElementById("innerWidth").innerHTML = 'innerWidth: '+ window.innerWidth;
+        document.getElementById("innerHeight").innerHTML = 'innerHeight: '+ window.innerHeight;
+        document.getElementById("outerWidth").innerHTML = 'outerWidth: '+ window.outerWidth;
+        document.getElementById("outerHeight").innerHTML = 'outerHeight: '+ window.outerHeight;
+    </script>
+</body>
+</html>
