@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div>{{ messageA }}</div>
+        <div>{{ messageB }}</div>
+        <button v-on:click="changeMessage">Change</button>
+    </div>
+    <script>
+        const vueModel = new Vue ({
+            el: '#app',
+            data: {
+                messageA: 'Message A.',
+                messageB: ''
+            },
+            methods: {
+                changeMessage () {
+                    this.messageA = 'Changed Message A!'
+                    this.messageB = 'Changed Message B!'
+                }
+            },
+            computed: {},
+            watch: {
+                messageA (newMessageA) {
+                    console.log(newMessageA);
+                }
+            },
+            created () {
+
+            },
+            mounted () {
+
+            }
+        })
+        console.log(vueModel);
+    </script>
+</body>
+</html>

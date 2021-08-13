@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000;
+            position:relative;
+        }
+        h1 {
+            color: #fff;
+        }
+        .cursor_item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        let h1;
+        let cursor_item;
+        let orientAlpah;
+        let orientBeta;
+        let orientGamma;
+        let mouseX = 0;
+        let mouseY = 0;
+        let speed = 0.03;
+
+        window.onload = function() {
+            h1 = document.getElementsByTagName("h1")[0];
+            cursor_item = document.getElementsByClassName("cursor_item")[0];
+
+            window.addEventListener("deviceorientation", orientationFunc, false);
+
+            function orientationFunc(e) {
+                orientAlpah = Math.floor(e.alpha);
+                orientBeta = Math.floor(e.beta);
+                orientGamma = Math.floor(e.gamma);
+
+                // h1.innerHTML = "- alpha : " + orientAlpah + "<br>- beta : " + orientBeta + "<br>- gamma : " + orientGamma;
+            }
+            loop();
+        }
+        function loop() {
+            orientGamma += (orientGamma - mouseX) * speed;
+            orientBeta += (orientBeta - mouseY) * speed;
+
+            h1.innerHTML = "orientGamma : "+ orientGamma + "<br>orientBeta : " + orientBeta;
+            cursor_item.style.transform = "translate("+ orientGamma +"px,"+ orientBeta +"px)";
+            window.requestAnimationFrame(loop);
+        }
+    </script>
+    <title>deviceorientation event</title>
+</head>
+<body>
+    <h1>test</h1>
+    <div class=cursor_item></div>
+</body>
+</html>

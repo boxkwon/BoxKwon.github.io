@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            position: relative;
+            height: 100%;
+            cursor : none;
+        }
+        body {
+            background-color: #000;
+        }
+        h1 {
+            color: #fff;
+        }
+        .cursor_item {
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let h1 = document.getElementsByTagName("h1")[0];
+            let cursor_item = document.getElementsByClassName("cursor_item")[0];
+
+            window.addEventListener("deviceorientation", orientationFunc, false);
+
+            function orientationFunc(e) {
+                let orientAlpah = Math.floor(e.alpha);
+                let orientBeta = Math.floor(e.beta);
+                let orientGamma = Math.floor(e.gamma);
+
+                h1.innerHTML = "alpha : " + orientAlpah + "<br>beta : " + orientBeta + "<br>gamma : " + orientGamma;
+                cursor_item.style.transform = "translate("+ orientGamma +"px,"+ orientBeta +"px)";
+            }
+        }
+    </script>
+    <title>deviceorientation event</title>
+</head>
+<body>
+    <h1>test</h1>
+    <div class=cursor_item></div>
+</body>
+</html>

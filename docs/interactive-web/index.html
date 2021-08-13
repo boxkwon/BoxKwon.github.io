@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxKwon.github.io</title>
+</head>
+<body>
+    <h1>인터랙티브 웹 개발 초급</h1>
+
+    <h2>2021.05.30</h2>
+    <ul>
+        <li>인터랙티브 웹 개발 초급 시작 - <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C-%EC%9B%B9" target="_blank">강의 링크</a></li>
+    </ul>
+    <hr>
+    <h2>2021.05.30</h2>
+    <ul>
+        <li>
+            <a href="mousemove/index.html" target="_blank">01 - mouse move 값 활용 : 마우스 위치에 따라서 오브젝트가 움직이게 한다. (모바일은 자이로센서 활용) (새창 열림)</a>
+            <ol>
+                <li>window.addEventListener함수, mousemove 이벤트 사용</li>
+                <li>마우스이동시 mousemove 이벤트를 트리거할 때마다 clientX, clientY 속성으로 좌표 확인.</li>
+                <li>window.onload함수로 시각적으로 값을 확인하기 위한 테스트 코드 삽입 : innerHTML 속성사용</li>
+                <li>마우스포인터를 따라다니는 박스를 생성 후 style.transform 속성으로 translate에 트리거한 x, y 좌표 값을 저장</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.05.31</h2>
+    <ul>
+        <li>
+            <a href="mousemove/mousemove2.html" target="_blank">02 - requestAnimationFrame (loop, 자연스러운 움직임) (새창 열림)</a>
+            <ol>
+                <li>구문 : requestAnimationFrame(callback);</li>
+                <li>브라우저에게 수행하고자 하는 애니메이션을 알리고 다음 리페인트가 진행되기 전에 해당 애니메이션을 업데이트하는 함수를 호출하게 한다.</li>
+                <li>리페인트 이전에 실행할 콜백을 인자로 받는다.</li>
+                <li>보통 1초에 60회 콜백하지만 대부분의 브라우저에서는 W3C 권장사항에 따라 디스플레이 주사율과 일치한다.</li>
+                <li>캔버스 애니메이션이나 3D컨텐츠에 많이 사용한다.</li>
+                <li>모바일의 자이로 센서에서도 활용 가능.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.01</h2>
+    <ul>
+        <li>
+            <a href="mousemove/mousemove3.html" target="_blank">03 - transition, easing (가속도) (새창 열림)</a>
+            <ol>
+                <li>css3를 이용하여 자연스러운 애니메이션을 사용해 본다.</li>
+                <li>*팁 : 구글링(css3 easeing) 을 통해 예제를 만들어본후 코드 복사. : <a href="https://matthewlein.com/tools/ceaser" target="_blank">https://matthewlein.com/tools/ceaser</a></li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.03</h2>
+    <ul>
+        <li>
+            <a href="mousemove/mousemove4.html" target="_blank">04 - 3D공간감과 마우스 위치값을 가운데로 주기 (새창 열림)</a>
+            <ol>
+                <li>브라우저 내에서 마우스 위치값을 중앙으로 오게 한다.</li>
+                <li>transform-style 속성으로 3D공간에서 렌더링 되는 방식을 지정한다.</li>
+                <li>"x = e.clientX (마우스x) - window.innerWidth / 2 (화면 사이즈 /2)"의 수식을 사용하면 마우스 위치값이 중앙으로 오게된다.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.04</h2>
+    <ul>
+        <li>
+            <a href="mousemove/mousemove5.html" target="_blank">05 - 여러 오브젝트들 각각 transform 값을 다르게 적용하여 더 입체적인 화면 구현하기. (새창 열림)</a>
+            <ol>
+                <li>여러 오브젝트에 transform 값을 다르게 주어 3D공감감을 준다.</li>
+                <li>다음 시간에는 모바일 자이로 센서를 이용하여 모바일에서도 같은 효과를 적용해보도록 한다.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.05</h2>
+    <ul>
+        <li>
+            <a href="mousemove/deviceorientation.html" target="_blank">01 - mousemove 이벤트를 deviceorientation (모바일 자이로센서)로 변환하기 (새창 열림)</a>
+            <ol>
+                <li>deviceorientation를 사용하여 모바일 디자이스 회전시 이벤트를 감지</li>
+                <li>기존 PC에서 사용하던 mousemove 이벤트와 함께 사용해 모바일 기기에도 대응해보도록 한다.</li>
+                <li>자이로센서가 어떤 값을 가지고있는지 확인하는데에 성공.</li>
+                <li>정확히 동작하는 원리는 파악하지 못하였음.</li>
+                <li>나머지 4개의 mousemove예제 변환을 통해 더 깊히있게 알아보도록 하자.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.06</h2>
+    <ul>
+        <li>
+            <a href="mousemove/deviceorientation2.html" target="_blank">02 - mousemove 이벤트를 deviceorientation 이벤트로 바꾸기 (requestAnimationFrame() 함수) (새창 열림)</a>
+            <ol>
+                <li>NaN가 뜬다.</li>
+                <li>정확한 동작원리를 이해하지 못하고 학습한 결과 응용에 실패했다.</li>
+                <li>결과 화면은 나왔으나 온전한 나의것이 아니기에 강의를 모두 수강후 다시 도전해 보기로 한다.</li>
+                <li>자이로 센서를 이용한 학습은 우선 여기서 종료.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.07 (2021.06.08 기록)</h2>
+    <ul>
+        <li>
+            <ol>
+                <li>23개월 아들 재우면서 같이 잠들어버렸다 :)</li>
+                <li>당연히 잠들어버려 공부를 못했다.</li>
+                <li>매일 공부와 함께하던 실내 자전거 타기도 하루 날아가 버림...</li>
+                <li>1일 1커밋은 실패다.</li>
+                <li>하루 일과를 마치고 공부하다보니 너무 피곤한 상태였다.</li>
+                <li>하루 일과 시작전인 새벽에 일찍 일어나서 공부를 해봐야겠다.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.08</h2>
+    <ul>
+        <li>
+            <a href="mouseover/index.html" target="_blank">JS - mouseover 이벤트와 CSS - mix-blend-mode속성의 multiply 활용 (새창 열림)</a>
+            <ol>
+                <li>커서 아이템의 크기가 변하는건 transform 속성으로 구현하기 때문에 중첩을 방지하기위해 두개의 오브젝트로 구현</li>
+                <li>* mix-bled-mod는 ie에서 지원하지 않는다...ie...</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.10</h2>
+    <ul>
+        <li>
+            <a href="scrolltop/index.html" target="_blank">스크롤 값을 활용한 인터랙티브 - 기본 (scrollTop) (새창 열림)</a>
+            <ol>
+                <li>documentElement 속성은 항상 &lt;html&gt;요소를 가리킨다.</li>
+                <li>scrollTop 속성은 요소의 컨텐츠가 세로로 스크롤되는 픽셀 수를 설정하거나 반환한다.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.11</h2>
+    <ul>
+        <li>
+            <a href="scrolltop/progressbar.html" target="_blank">스크롤 값을 활용한 인터랙티브 - 가로 진행 바(progress bar) (새창 열림)</a>
+            <ol>
+                <li>전체 화면에서 현재 스크롤바가 어느 위치인지 백분율을 구한다</li>
+                <li>Math객체의 ceil 함수를 사용하여 소수점 이하를 올림한다</li>
+                <li>스크롤값 / (문서 전체의 길이 - 화면의 길이) * 100</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.12</h2>
+    <ul>
+        <li>
+            <a href="scrolltop/progressbar2.html" target="_blank">스크롤 값을 활용한 인터랙티브 - 세로 진행 바(progress bar) (새창 열림)</a>
+            <ol>
+                <li>css 스타일 변경 만으로 조금 더 세련된 UI로 바꾸기</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.13</h2>
+    <ul>
+        <li>
+            <a href="scrolltop/parallax.html" target="_blank">스크롤 값을 활용한 인터랙티브 - 패럴랙스 기초 구현, 더미 텍스트 활용 (새창 열림)</a>
+            <ol>
+                <li>더미 텍스트를 활용한 실제 컨텐츠 예제</li>
+                <li>윈도우 기준으로 스크롤 한 번에 100픽셀 씩 이동한다.</li>
+                <li>지정한 오브젝트에 수식을 통해서 100보다 크거나 작은 값을 저장하여 전체 스크롤보다 빠르거나 천천히 이동하도록 한다.</li>
+                <li>천천히 움직일 오브젝트.style.transform = "translate(0, " + 스크롤탑값 / 증감값 +"px)";</li>
+                <li>* 더미 텍스트 라고 구글링하면 의미없는 긴 문장을 손쉽게 찾을 수 있다.</li>
+                <li></li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.14</h2>
+    <ul>
+        <li>
+            <a href="scrolltop/parallax2.html" target="_blank">스크롤 값을 활용한 인터랙티브 - 브런치 스타일. scale, opacity 패럴랙스 페이지 구현 (새창 열림)</a>
+            <ol>
+                <li>이미지를 화면 상단에 position: fixed로 고정 시킨다.</li>
+                <li>상단 이미지의 height 만큼 margin-top을 해줘서 이미지와 텍스트 모두 보이게 한다.</li>
+                <li>텍스트 영역의 z-index값을 더 크게 주어 스크롤시 상단 이미지를 덮어 준다.</li>
+                <li>h1에 background-position의 Y값에 스크롤탑 값을 나눈값을 저장하여 스크롤보다 천천히 올라가 입체감을 준다.</li>
+                <li>이미지의 transform 속성의 scale값에 스크롤탑 값을 이용하여 변화를 준다.</li>
+                <li>이미지를 덮은 레이어에 opacity값에 스크롤탑 값을 이용하여 변화를 준다. </li>
+                <li>* background 축약어 : background:url(이미지 url)포지션x 포지션y / 사이즈 반복</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.17</h2>
+    <ul>
+        <li>
+            <a href="parallax/index.html" target="_blank">입체감이 느껴지는 패럴랙스 페이지 구현 (새창 열림)</a>
+            <ol>
+                <li>입체감이 느껴지는 패럴랙스를 위해서는 최소2개~3개의 레이어는 있어야 구현이 가능하다.</li>
+                <li>페이지가 로드되면 각 이미지 요소들을 저장한다.</li>
+                <li>mousemove 이벤트로 윈도우의 중심점을 잡아주어 오브젝트의 생동감을 준다.</li>
+                <li>scrollTop과 translate3d 속성을 이용해 각 레이어 오브젝트들에게 서로다른 움직임을 준다</li>
+                <li>requestAnimationFrame(loop)를 사용하여 자연스러운 애니메이션을 구현한다.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <h2>2021.06.18</h2>
+    <ul>
+        <li>
+            <a href="translateZ/index.html" target="_blank">translateZ 활용한 입체적인 페이지 (새창 열림)</a>
+            <ol>
+                <li>querySelectorAll을 사용하여 모든 레이어 이미지를 가지고온다.</li>
+                <li>스크롤 이벤트가 일어날때마다 깊이감을 조절하는 perspective속성에 값을 넣어준다.</li>
+                <li>레이어에 모두 동일한 값을 넣어주면 입체감이 느껴지지 않기 때문에 수식을 통해 레이어마다 다른 값이 적용되게 한다.</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxKwon.github.io</title>
+</head>
+<body>
+    <h1>Vue 시작하기</h1>
+
+    <h2>2021.06.22</h2>
+    <ol>
+        <li>
+            <h3>Node.js 개발 - 1 - 설치 및 버전 관리</h3>
+            <ul>
+                <li>프론트앤드 개발을 하기위해서는 node.js 환경이 필요하다.</li>
+                <li>로컬환경에 자바스크립트를 통해서 서버개발을 할수있는 런타임 환경을 제공한다.</li>
+                <li>npm으로 특정 모듈들을 로컬 환경에서 관리한다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Vue 기본설치</h3>
+            <a href="chapter1/index.html" target="_blank">cdn 사용하여 vue 실행 (새창)</a>
+            <ul>
+                <li>vue.js 홈페이지 다운받아서 직접 연결, cdn을 통해 웹에 있는 vue.js파일을 연결하는 총 두가지 방법이 있다.</li>
+                <li>간단히 연결할수있다는것이 장점이다.</li>
+                <li>개발용 버전으로 개발하고 배포하기전에 배포용으로 변경하기도 한다.</li>
+                <li>cdn(Content Delivery Network) : 전세계에 분산되어져있는 서버에서 다운로드 받아서 쓰는 개념</li>
+                <li>new라는 키워드로 시작하는 함수 실행은 생성자 함수이며, instance가 생성된다.</li>
+                <li>인수로 객체 데이터를 추가하고 프로퍼티로 엘리먼트를 선택한다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Vue 시작하기 - 1 - 선언적 렌더링</h3>
+            <ul>
+                <li>html에 특정 요소에 템플릿 문법으로 렌더링하고 관리할수있다.</li>
+                <li>자바스크립트의 특정 데이터를 변경하면 화면에 다시 자동으로 반응적으로 렌더링하는 반응형이다.</li>
+                <li>v-bind: 자바스크립트의 vue에서 html에 바인딩 시키는 개념</li>
+                <li>jquery는 html을 직접적으로 제어했다. 속도가 느린 단점이 있다. ( html의 특정요소 찾기 -> 데이터 추출 -> 새로운 데이터를 html에 삽입하는 과정을 거침 )</li>
+                <li>vue는 데이터를 제어하면 html에 자동으로 렌덩링 하는 개념이다. 데이터를 가지고 html을 만드는데 특화 되어있다.</li>
+                <li>
+                    <span><a href="chapter1/v-bind_Class.html" target="_blank">예제 (새창)</a></span>
+                    <ol>
+                        <li>active 데이터 boolean으로 정의</li>
+                        <li>v-bind 디렉티브 적용</li>
+                        <li>
+                            <p><strong>v-bind:class</strong></p>
+                            <p>-> vue에있는 데이터와 바인딩해서 class 속성을 제어한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>class="text" v-bind:class="{ 'active' : active }"</strong></p>
+                            <p>-> vue에서 정의한 'active'라는 데이터가 true일때만 text 클래스에 active 클래스를 추가한다</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.06.24</h2>
+    <ol>
+        <li>
+            <h3>Vue 시작하기 - 2 - 조건문과 반복문</h3>
+            <ul>
+                <li>엘리먼트 존재 여부를 토글하는것은 간단하다.</li>
+                <li>"v-xxx" 디렉티브 라고 한다.</li>
+                <li>직접 엘리먼트를 선택해서 제어할 필요 없이 데이터만 변경하면 렌더링도 제어가 된다.</li>
+                <li>Vue 엘리먼트가 Vue에 삽입/갱신/제거될 때 자동으로 <strong>트랜지션</strong>효과를 적용할 수 있다.</li>
+                <li>
+                    <p><a href="chapter1/v-if.html" target="_blank">조건문 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>v-if="message"</strong></p>
+                            <p>-> 만약에 message가 비어있으면 출력하지 않겠다 라는 의미로써도 사용한다.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p><a href="chapter1/v-for.html" target="_blank">반복문 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>v-for="item in items"</strong></p>
+                            <p>-> items라는 데이터를 반복시킬건데 이 안에 들어있는 각각의 객체데이터를 item이라는 이름으로 정의해서 반복한다</p>
+                        </li>
+                        <li>
+                            <p><strong>{{ item.message }}</strong></p>
+                            <p>-> item에 들어있는 특정 message를 출력하려면 item이라는 객체에 들어있는 message라는 프로퍼티를 찍어서 템플릿 문법으로 출력해주세요</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:key="item.id"</strong></p>
+                            <p>-> item에 들어있는 id라는 고윳값을 키로 정의하겠다.</p>
+                        </li>
+                        <li>v-for 디렉티브는 v-bind:key 속성을 함께 사용하는것이 v-for의 기본 문법이다.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.06.26</h2>
+    <ol>
+        <li>
+            <h3>Vue 시작하기 - 3 - 사용자 입력 핸들링 (클릭 이벤트)</h3>
+            <ul>
+                <li>사용자가 앱과 상호작용할 수 있게 하기위해 v-on 디렉티브를 사용하여 vue 인스턴스에서 메소드를 호출하는 이벤트 리스너를 추가한다.</li>
+                <li>this : 함수안에서 자신을 가리키고, vue 인스턴스 내에서는 vue 인스턴스를 가리킨다.</li>
+                <li>this.message : data에 있는 message를 의미한다.</li>
+                <li>DOM을 건드리지 않고 앱의 상태를 업데이트 한다.</li>
+                <li>form의 input과 앱 상태를 양방향으로 바인딩하는 v-model 디렉티브가 있다.</li>
+                <li>
+                    <p><a href="chapter1/handling.html" target="_blank">이벤트 핸들링 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>toggleElement ()</strong></p>
+                            <p>-> ES6의 문법 : 객체 데이터의 특정한 프로퍼티가 function keyword를 정의해서 함수를 담을때 단축해서 사용할 수 있다.</p>
+                        </li>
+                        <li>
+                            <p><strong>this.toggle = !this.toggle</strong></p>
+                            <p>-> 추가하되 this.toggle의 현재값에 반대되는 값을 추가하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:class="{ active: toggle}"</strong></p>
+                            <p>-> active라는 클래스를 추가하는데 toggle의 값에 따라 추가하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-on:click="toggleElement"</strong></p>
+                            <p>-> 사용자가 클릭했을때 toggleElement함수를 실행하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-modle="message"</strong></p>
+                            <p>-> message는 문자 데이터이고 message라는 데이터를 v-model(input)에 연결해서 <strong>양방향</strong>으로 사용한다.</p>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>display: flex : 정렬 방식</li>
+                                <li>justify-content : 수평 정렬</li>
+                                <li>align-items: 수직 정렬</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.06.28</h2>
+    <ol>
+        <li>
+            <h3>Vue 시작하기 - 4 - 컴포넌트를 사용한 작성 방법 .1</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter1/component1.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>Vue.component('todo-item', {...})</strong></p>
+                            <p>-> Vue.Componet 통해서 todo-item이라는 컴포넌트를 정의한다. 첫번째 인자로 컴퍼넌트의 이름을 넣는다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-for="item in groceryList"</strong></p>
+                            <p>-> groceryList 배열 데이터를 반복한다. 배열안의 객체를 item이라는 이름으로 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:todo="item"</strong></p>
+                            <p>-> todo라는 속성으로 item이라는 이름의 객체를 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>props: ['todo']</strong></p>
+                            <p>-> props를 통해서 todo라는 커스텀 프로퍼티를 html 커스텀 속성을 추가하고 데이터를 받아와서 내부에서 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>&lt;todo-item&gt;&lt;/todo-item&gt;</strong></p>
+                            <p>-> todo-item 이라는 커스텀화된 태그에 template의 내용이 삽입된다.</p>
+                        </li>
+                        <li>
+                            <p><strong>template: '&lt;li&gt;{{ todo.text }}&lt;/li&gt;'</strong></p>
+                            <p>-> todo에 들어있는 프로퍼티 text를 li태그 내부에 템플릿 문법을 통해서 출력한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.06.29</h2>
+    <ol>
+        <li>
+            <h3>Vue 시작하기 - 5 - 컴포넌트를 사용한 작성 방법 .2</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter1/component2.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>v-for="todo in todos"</strong></p>
+                            <p>-> todos라는 데이터를 정의할건데 그안에서 todo라는 이름에 각각의 객체데이터를 todo라는 이름으로 활용해서 쓰겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:key="todo.id"</strong></p>
+                            <p>-> 데이터를 처리할때는 v-bind를 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>{{ todo.title }}</strong></p>
+                            <p>-> 템플릿 문법으로 todo에 들어있는 title을 하나씩 출력한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-model="todo.done"</strong></p>
+                            <p>-> input에 데이터를 연결할 때는 v-model을 사용하여 양방향 데이터 바인딩을 한다.</p>
+                            <p>-> todo에 들어있는 done의 데이터를 기준으로 체크 유무를 정의해서 화면에 렌더링 한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:class="{ done: todo.done }"</strong></p>
+                            <p>-> done이라는 클래스를 추가하는데 todo에 들어있는 done의 상태에 따라서 추가할지 결정한다</p>
+                        </li>
+                        <li>
+                            <p><strong>template: `&lt;li&gt;...&lt;/li&gt;`</strong></p>
+                            <p>-> template을 여러번 반복시키기 때문에 내부에 v-for와 v-bind:key는 있을 필요가 없다.</p>
+                        </li>
+                        <li>
+                            <p><strong>props: ['todo']</strong></p>
+                            <p>-> 외부에서 todo라는 이름으로 받아와서 내부에 전달해 준다.</p>
+                        </li>
+                        <li>
+                            <p><strong>v-bind:todo="todo"</strong></p>
+                            <p>-> todo라는 속성을 부여하고 todo 객체를 전달한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.06.30</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 01. Vue 인스턴스</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/index.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>v-on:click="changeMessage"</strong></p>
+                            <p>클릭했을때 changeMessage 메소드를 실행한다.</p>
+                        </li>
+                        <li>
+                            <p>개발자 도구에서 vueModel의 인스턴스가 가지고있는 내용을 확인한다.</p>
+                            <p>함수를 담고있으면 메소드이고, 기본적인 데이터를 담고있으면 속성이다.</p>
+                            <p>$표시되어있으면 vue에서 제공하는 속성들이다.</p></p>
+                        </li>
+                        <li>
+                            <p>데이터를 변경하면 화면이 갱신되는 vue의 대표적인 정체성이다.</p>
+                        </li>
+                        <li>
+                            <p>vue인스턴스가 생성될때 정의 되지않은 데이터는 반응성을 가지지 않는다.</p>
+                        </li>
+                        <li>
+                            <p><strong>data: {messageB: ''}</strong></p>
+                            <p>-> 인스턴스를 생성할때 반응성을 가지게 하려면 미리 데이터를 정의해야 한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>watch: {...}</strong></p>
+                            <p>-> messageA의 데이터가 변경될때 watch에있는 messageA 함수가 실행된다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.07.04</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 02. Vue 라이프사이클 -1</h3>
+                <ol>
+                    <li>
+                        <p>기본적인 이벤트를 정의되면 <strong>beforeCreate</strong>라는 hook이 실행된다.</p>
+                    </li>
+                    <li>
+                        <p>외부 모듈을 가져다 사용하거나 반응성을 부여하면 <strong>created</strong>라는 hook이 실행된다.</p>
+                    </li>
+                    <li>
+                        <p><strong>el</strong>이라는 옵션이 있는지 체크한다.</p>
+                    </li>
+                    <li>
+                        <p><strong>template</strong>이라는 옵션이 있는지 체크한다.</p>
+                    </li>
+                    <li>
+                        <p><strong>redering</strong>하거나 <strong>compile</strong>한다.</p>
+                    </li>
+                    <li>
+                        <p>연결이 되기 전에 <strong>beforeMount</strong>가 실행된다.</p>
+                    </li>
+                    <li>
+                        <p>연결이 되면 <strong>mounted</strong>가 실행된다.</p>
+                    </li>
+                    <li>
+                        <p>데이터가 변경되어 화면이 재 렌더링 되기 전에 <strong>beforeUpdate</strong>가 실행된다</p>
+                    </li>
+                    <li>
+                        <p>화면이 재 렌더링 된 후에 <strong>updated</strong>가 실행된다.</p>
+                    </li>
+                    <li>
+                        <p>인스턴스가 더이상 필요없을때 <strong>$destroy()</strong>를 실행하여 파괴하면 <strong>beforeDestroy</strong>가 실행된다.</p>
+                    </li>
+                    <li>
+                        <p>vue인스턴스의 기본적인 내용들이 파괴되면 <strong>destroyed</strong>가 실행된다.</p>
+                    </li>
+                </ol>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.07.05</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 03. Vue 라이프사이클 -2</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/life-cycle.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>beforeCreate({console.log(this.message)})</strong></p>
+                            <p>-> vue 인스턴스가 생성되기 전이기 때문에 이터에 있는 message가 무엇인지 모른다. undefined가 뜬다.</p>
+                        </li>
+                        <li>
+                            <p><strong>created({console.log(this.message)})</strong></p>
+                            <p>-> 인스턴스가 생성된 나서 실행되기 때문에 Hello Vue가 출력된다.</p>
+                        </li>
+                        <li>
+                            <p>vue 에서 제공하는 <strong>ref</strong>속성을 사용하여 "div"라는 이름의 요소를 참조하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>beforeMount({console.log(this.$refs.div)})</strong></p>
+                            <p>-> ref속성으로 정의한 각각의 요소들을 가지고있는데 그 안에서 "div"라는 이름의 요소를 참조하여 보여주겠다.</p>
+                            <p>-> html요소와 vue 인스턴스가 연결되기 전이라 undefined가 뜬다.</p>
+                        </li>
+                        <li>
+                            <p><strong>mounted({console.log(this.$refs.div)})</strong></p>
+                            <p>-> 연결된 후에 체크하기때문에 "div"라는 이름의 요소를 출력한다.</p>
+                        </li>
+                        <li>
+                            <p>vue 에서 제공하는 <strong>ref</strong>속성을 사용하여 "message"라는 이름의 요소를 참조하겠다.</p>
+                        </li>
+                        <li>
+                            <p><strong>beforeUpdate({console.log(this.$refs.message.innerText)})</strong></p>
+                            <p>-> 데이터가 변경되고 나서 화면이 재 렌더링 되기 직전에 실행되기 때문에 화면에 원래 그려져있던 text가 출력된다.</p>
+                        </li>
+                        <li>
+                            <p><strong>updated({console.log(this.$refs.message.innerText)})</strong></p>
+                            <p>-> 데이터가 변경되고 화면이 재 렌더링 된 후에 실행되었기 때문에 변경한 text가 화면에 출력된다.</p>
+                        </li>
+                        <li>
+                            <p><strong>beforeDestroy()</strong></p>
+                        </li>
+                        <li>
+                            <p><strong>destroyed()</strong></p>
+                            <p>-> vueModel.message = "Hello World~" 를 실행해도 데이터는 들어갔지만 반응성이 사라졌다.</p>
+                            <p>-> vue 인스턴스를 사용하지않는데 메모리를 잡아먹거나 하는 상황에서 사용하기도 한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.07.07</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 04. Vue 템플릿 문법</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/template_syntax.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>&lt;div v-once&gt;</strong></p>
+                            <p>-> 반응성으로 매번 렌더링 하지않고 한번만 렌더링하고 관찰하지 않겠다</p>
+                        </li>
+                        <li>
+                            <p><strong>&lt;div v-html&gt;</strong></p>
+                            <p>-> 특정 태그를 직접적으로 삽입 해야 할때, 순수 HTML 태그를 삽입하려고 할때는 v-html 디렉티브를 사용한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>보간법(Interpolation)</strong>에는 자바스크립트의 모든 표현식을 사용할 수 있다.</p>
+                        </li>
+                        <li>
+                            <p><strong>&lt;div v-bind:class="..." v-on:click="..."&gt;</strong> -> <strong>&lt;div :class @click&gt;</strong></p>
+                            <p>-> 데이터가 특정한 속성에서 사용되려면 특정 디렉티브를 붙여 주어야 한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.07.08</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 05. computed</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/computed.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>computed: {...}</strong></p>
+                            <p>-> 서버에서 데이터를 가지고와서 화면을 만들어 내려고하는데 내가 필요한 속성이 없을때 사용한다. </p>
+                        </li>
+                        <li>
+                            <p><strong>return this.todos</strong></p>
+                            <p>-> 특정 값을 return 받아야 한다.</p>
+                            <p>-> data 옵션 내부의 특정 데이터를 연결해 준다.</p>
+                        </li>
+                        <li>
+                            <p><strong>return this.todos.map((todo, index => {...}))</strong></p>
+                            <p>-> 원본 데이터 todo가 갱신되면 computedTodos도 갱신되는 환경 설계</p>
+                            <p>-> 원본 데이터를 반복한 후 가공된 데이터를 반환해 주는 메소드인 <strong>map()</strong>사용</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h2>2021.07.14</h2>
+    <ol>
+        <li>
+            <h3>Vue 가이드 - 06. computed 캐싱</h3>
+            <ul>
+                <li>
+                    <p><a href="chapter2/computed2.html" target="_blank"> 예제 (새창)</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>methods: {reverseMessage() {return this.message.split('').reverse().join('')}}</strong></p>
+                            <p>-> methods를 통해서 값을 return 하는데 data에 있는 message를 split해서(기준없는 데이터로 쪼개서 배열데이터로 만든 다음) reverse시키고 join으로 기준없이 다시 합친다.</p>
+                            <p>-> message를 여러번 띄우려면 결과적으로 위의 명령을 여러번 동작해야 한다.</p>
+                            <p>-> 함수가 여러번 실행되어야하고 함수가 실행될때마다 표현식이 반복적으로 계속 실행되어야 한다.</p>
+                        </li>
+                        <li>
+                            <p><strong>computed: {reversedMessage() {return this.message.split('').reverse().join('')}}</strong></p>
+                            <p>-> 표현식은 함수로 구현했지만 결과적으로 사용할때는 데이터처럼 사용한다.</p>
+                            <p>-> 최초에 한번만 연산하여 computed 데이터가 또 사용되면 기존에 연산한게 있기 때문에 결과값을 캐싱하고 또 연산하지 않고 결과만 출력한다.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
